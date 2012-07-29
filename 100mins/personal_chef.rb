@@ -37,8 +37,17 @@ totally replaces it.
 class PersonalChef
   def make_donuts(flavor)
     puts "Making #{flavor} donuts!"
+    return self
+  end
+  def make_crepes(fruit)
+    puts "Making #{fruit} crepes!"
+    return self
+  end
+  def make_sushi(fish)
+    puts "Making #{fish} sushi!"
+    return self
   end
 end
 
-wilfred.make_donuts('cake')
+wilfred.make_donuts('cake').make_crepes('strawberry banana').make_sushi('sockeye')
 
