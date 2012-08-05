@@ -22,6 +22,13 @@ end
 
 gem 'jquery-rails'
 
+group :test, :development do
+  gem 'turn' #prettier test results printing
+  gem 'rspec-rails'#rspec testing
+  gem 'capybara'#simulated user minion
+  gem 'guard-rspec'#automatically run tests
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
