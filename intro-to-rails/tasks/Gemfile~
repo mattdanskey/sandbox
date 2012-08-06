@@ -23,7 +23,7 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
-  gem 'turn' #prettier test results printing
+  #gem 'turn' #prettier test results printing| causes issues :/
   gem 'rspec-rails'#rspec testing
   gem 'capybara'#simulated user minion
   gem 'guard-rspec'#automatically run tests
