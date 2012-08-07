@@ -1,0 +1,32 @@
+<!-- 
+Took a crack at writing it before I saw how the tutorial did.
+Got the job done! Things are falling in to place
+
+<h1>All Posts:</h1>
+<ul>
+  <% @posts.each do |post| %>
+    <li> <h4><%= post.title %></h4>
+      <%= post.text %>
+    </li>
+  <% end %>
+</ul> -->
+
+<h1>Listing posts</h1>
+
+<%= link_to 'New post', :action => :new %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+      <td><%= link_to 'Show', :action => :show, :id => post.id %></td>
+      <td><%= link_to 'Edit' :action => :edit, :id => post.id %></td>
+    </tr>
+  <% end %>
+</table>

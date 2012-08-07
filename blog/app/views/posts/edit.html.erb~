@@ -1,13 +1,13 @@
-<h1>New Post</h1>
+<h1>Editing post</h1>
 
-<%= form_for :post, :url => { :action => :create } do |f| %>
+<%= form_for :post, :url => { :action => :update, :id => @post.id }, :method => :put do |f| %>
   <% if @post.errors.any? %>
   <div id="errorExplanation">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
     <ul>
-    <% @post.errors.full_message.each do |msg| %>
+    <% @post.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
-    <% end %>
+    <% end>
     </ul>
   </div>
   <% end %>
@@ -17,13 +17,14 @@
   </p>
   
   <p>
-    <%= f.label :text %><br/>
+    <%= f.label :text %><br />
     <%= f.text_area :text %>
   </p>
   
   <p>
-   <%= f.submit %>
+    <%= f.submit %>
   </p>
 <% end %>
 
 <%= link_to 'Back', :action => :index %>
+
