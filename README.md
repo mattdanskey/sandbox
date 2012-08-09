@@ -11,7 +11,7 @@
 <p>This contains a method that parses roman numerals, partly written at a ruby beginners meetup, then finished by myself.</p>
 
 <h2>blog</h2>
-<p>Created while following the getting started guide at <a href='http://guides.rubyonrails.org'>RailsGuides</a></p>
+<p>Created while following the getting started guide at <a href='http://edgeguides.rubyonrails.org'>RailsGuides</a></p>
 
 <h2>dreamCal-alpha</h2>
 <p>My first (in-progress) attempt at creating a Rails app from scratch. I expect to redo everything at least once later on</p>
