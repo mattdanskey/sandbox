@@ -1,13 +1,9 @@
 Blog::Application.routes.draw do
-  get "welcome/index"
+  
+  resources :posts
+  
   root :to => "welcome#index"
-  get "posts/new"
-  get "posts" => "posts#index"
-  post "posts" => "posts#create"
-  get "posts/:id" => "posts#show", :as => :post
-  get "posts/:id/edit" => "posts#edit"
-  put "posts/:id" => "posts#update"
-  delete "posts/:id" => "posts#destroy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
