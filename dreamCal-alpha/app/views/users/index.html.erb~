@@ -1,1 +1,8 @@
 <h1>Dream Calendar</h1>
+
+<table>
+  <th>User:</th>
+  <% @users.each do |user| %>
+    <td><%= link_to "#{user.name}", user_path(user.id) %></td>
+  <% end %>
+</table>

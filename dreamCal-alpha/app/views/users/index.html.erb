@@ -3,6 +3,6 @@
 <table>
   <th>User:</th>
   <% @users.each do |user| %>
-    <td><%= link_to "#{user.name}", user_path(user.id) %></td>
+    <td><%= link_to user.name, user_path(user.id) %></td>
   <% end %>
 </table>

@@ -18,9 +18,14 @@ describe "Users" do
     
   end
   
-  describe "POST /users" do
+  describe "GET /users/new" do
     
     it "creates a user" do
+      visit new_user_path
+      fill_in 'Name', :with => 'Obsidian'
+      fill_in 'Goal title', :with => 'Learn Ruby on Rails'
+      fill_in 'Goal description', :with => 'I want to learn Ruby on Rails, which is a web development framework built with Ruby.'
+      click_button 'Create User'
       
     end
     

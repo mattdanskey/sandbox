@@ -1,11 +1,22 @@
 class UsersController < ApplicationController
 
-  define index
+  def create
+  User.create(params[:name, :goal_title, :goal_description])
+  redirect_to users_path
+  
+  end
+  
+  def index
   @users = User.all
   
   end
+  
+  def new
+  @user = User.new
+  
+  end
 
-  define show
+  def show
   @user = User.find(params[:id])
   
   end
