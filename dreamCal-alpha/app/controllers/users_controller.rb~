@@ -1,0 +1,14 @@
+class UsersController < ApplicationController
+
+  define index
+  @users = User.all
+  
+  end
+
+  define show
+  @user = User.find(params[:id])
+  
+  end
+
+
+end
