@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def create
-  User.create(params[:name, :goal_title, :goal_description])
+  User.create(params[:name])
   redirect_to users_path
   
   end
