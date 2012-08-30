@@ -33,6 +33,7 @@ describe "Users" do
       page.should have_content "User"
       click_link 'Obsidian'
       page.should have_content 'Goal title'
+      @user = User.first.id
       current_path.should == user_path(@user)
       
     end

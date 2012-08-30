@@ -28,7 +28,7 @@ describe "Users" do
       fill_in 'Goal description', :with => 'I want to learn Ruby on Rails, which is a web development framework built with Ruby.'
       click_button 'Create User'
       
-      visit users_path
+   #   visit users_path
       current_path.should == users_path
       page.should have_content "User"
       click_link 'Obsidian'
